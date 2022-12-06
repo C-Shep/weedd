@@ -89,11 +89,15 @@ pathInformation Graph::dijkstra(int start, int end)
 	std::map<int, bool> visited;	// maps from vertices to whether or not the vertex has been visited yet so we do not visit vertices multiple times.
 	// priority queue of distances to vertices yet to visit alongside their index. DISTANCE FIRST, index second.
 	std::priority_queue<std::pair<int, int>, std::vector<std::pair<int,int>>, std::greater<std::pair<int,int>>> frontier;
-
+	
 	// TODO
 	// Set initial distances to arbitrarily high value and set start distance to 0. 
 	// Add start to frontier.
-	
+	distanceTo.insert(INT_MAX, INT_MAX);
+	pathTaken.insert(INT_MAX, INT_MAX);
+	visited.insert(INT_MAX, INT_MAX);
+
+	//frontier.push(distanceTo,pathTaken,);
 
 	// TODO
 	// main loop:
